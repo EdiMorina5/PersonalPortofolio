@@ -13,13 +13,14 @@
         <div class="container">
             <nav>
                 <img src="images/logo7.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li> 
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Software Engineer
@@ -36,7 +37,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images.png">
+                <img src="images/.png">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -105,10 +106,39 @@
                 </div>
             </div>
         </div>
-        <a href="https://github.com/EdiMorina11" class="btn">See more</a>
+        <a href="https://github.com/EdiMorina1" class="btn">See more</a>
     </div>
     
 </div>
+
+
+<!------------Contact------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>edimorina03@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+38349758293</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/edi.g.morina/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/edi-morina-b28ab7244/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/CV-Edi Morina.pdf" download class="btn btn2">Donwload CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
 <script>
@@ -127,6 +157,19 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 
+
+</script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
 
 </script>
 
