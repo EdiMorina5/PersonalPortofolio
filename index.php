@@ -1,3 +1,39 @@
+<?php
+$serverName = "127.0.0.1:3308";
+$userName = "root";
+$password = "";
+$db = "contact_db";
+
+$conn = new mysqli($serverName, $userName,$password, $db);
+
+
+if (mysqli_connect_errno()) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    exit();
+  }
+
+
+  if(isset($_POST['send'])){
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $msg = mysqli_real_escape_string($conn, $_POST['message']);
+ 
+    $select_message = mysqli_query($conn, "SELECT * FROM `contact_form` WHERE name = '$name' AND email = '$email'  AND message = '$msg'") or die('query failed');
+    
+    if(mysqli_num_rows($select_message) > 0){
+       $message[] = 'message sent already!';
+    }else{
+       mysqli_query($conn, "INSERT INTO `contact_form`(name, email,message) VALUES('$name', '$email','$msg')") or die('query failed');
+       $message[] = 'message sent successfully!';
+    }
+ 
+ }
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +73,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/.png">
+                <img src="images/user1.jpg">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -127,11 +163,11 @@
                 <a href="images/CV-Edi Morina.pdf" download class="btn btn2">Donwload CV</a>
             </div>
             <div class="contact-right">
-                <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
+                <form action="" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" name="send" class="btn btn2">Submit</button>
                 </form>
             </div>
         </div>
@@ -176,3 +212,4 @@
 
 </body>
 </html>
+
