@@ -1,5 +1,5 @@
 # PersonalPortofolio
-Ne kete projekt jan perfshire Html,CSS,JavaScript dhe PHP. Kam punuar gradualisht deri ne perfundim kisha dasht me cek ne lidhjen e database me php Mysql ne kompjuterin tim e kam ne portin 3308 jo ne 3306 si zakonisht kshty qe lidhjen e kam bere ne locahost dhe ne portin 3308 eventualisht nese nuk ju hapet juve ne kompjuterin tuaj at her vetem nryshone portin dhe ju funksionon.
+Ne kete projekt jan perfshire Html,CSS,JavaScript dhe PHP. Kam punuar gradualisht deri ne perfundim kisha dasht me cek ne lidhjen e database me php Mysql ne kompjuterin tim e kam ne portin 3308 jo ne 3306 si zakonisht kshty qe lidhjen e kam bere ne locahost dhe ne portin 3308 eventualisht nese nuk ju hapet juve ne kompjuterin tuaj ose ju ben problem ne lidhjen at her provoni ndroni portin si e keni ju te instaluar Mysql po nqofse nuk ju ben at her mund ta fshini lidhjen dhe ta hapni si index.html per ta par punimin.Por gjithqka eshte funksionale dhe punon siq duhet por vetem  deshta ta beje te ditur nese ndodh ndonje problem.
 
 Dukja e Portofolios ne Desktop Screens
 
